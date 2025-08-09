@@ -1,0 +1,13 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.guides.indentation": true,
+  "editor.tabSize": 2,
+  "search.exclude": {
+    "**/node_modules/**": true,
+    "**/vendor/**": true,
+    "*.lock": true,
+    "*lock.yaml": true,
+    "*lock.json": true
+  }
+}
