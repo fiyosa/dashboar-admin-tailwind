@@ -96,7 +96,7 @@
                 :class="_themeStore.get === 'light' ? 'border-gray-300' : 'border-gray-600'"
                 class="mt-1 ml-4 border-l"
               >
-                <li v-for="child in item.children" :key="child.name" class="mb-1">
+                <li v-for="(child, index) in item.children" :key="index" class="mb-1">
                   <router-link
                     :to="child.path"
                     :class="
