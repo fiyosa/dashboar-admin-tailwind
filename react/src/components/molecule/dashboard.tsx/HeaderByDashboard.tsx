@@ -54,7 +54,7 @@ export default function HeaderByDashboard() {
             themeStore.get === 'light' ? 'text-[var(--text-color-light)]' : 'text-[var(--text-color-dark)]'
           }`}
         >
-          {/* {pageTitle} */}
+          Home
         </div>
       </div>
 

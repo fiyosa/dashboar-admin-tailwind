@@ -1,1 +1,0 @@
-import{_ as e}from"./plugin-vueexport-helper-DlAUqK2U.js";import{c as t,o as s,a as n}from"../main.js";const r={},a={class:"home"};function c(d,o){return s(),t("div",a,o[0]||(o[0]=[n("h1",null,"404 Not Found",-1)]))}const l=e(r,[["render",c],["__scopeId","data-v-4d12eb06"]]);export{l as default};

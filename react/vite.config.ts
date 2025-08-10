@@ -5,6 +5,7 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig(({ command }) => ({
   plugins: [tailwindcss(), react()],
+  base: command === 'serve' ? '/' : '/dashboard-admin-tailwind',
 
   server: {
     port: 3000,
