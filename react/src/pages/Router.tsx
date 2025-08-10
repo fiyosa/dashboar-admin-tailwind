@@ -4,10 +4,11 @@ import Dashboard from '../components/molecule/dashboard.tsx/Dashboard'
 import NotFound from './guest/NotFound'
 import Home from './guest/Home'
 import About from './guest/About'
+import secret from '../config/secret'
 
 function Router() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={secret.APP_BASE_URL}>
       <Routes>
         <Route element={<Initial />}>
           <Route element={<Dashboard />}>
