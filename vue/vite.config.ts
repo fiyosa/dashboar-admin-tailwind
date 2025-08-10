@@ -19,7 +19,7 @@ export default defineConfig(({ command }) => ({
 
   esbuild: {
     legalComments: 'none', // remove copyright notice from bundle
-    drop: command === 'serve' ? [] : ['console'], // remove console.log in production
+    // drop: command === 'serve' ? [] : ['console'], // remove console.log in production
   },
 
   build: {

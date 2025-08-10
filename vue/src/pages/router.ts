@@ -18,6 +18,8 @@ const routes: readonly RouteRecordRaw[] = [
 const router = createRouter({ history: createWebHistory(), routes })
 
 router.beforeEach((to, from, next) => {
+  console.log({ to, from })
+
   if (to.meta?.auth) {
   }
 
