@@ -1,4 +1,5 @@
 import { type RouteRecordRaw, createRouter, createWebHistory } from 'vue-router'
+import secret from '../config/secret'
 
 const routes: readonly RouteRecordRaw[] = [
   {
@@ -15,7 +16,7 @@ const routes: readonly RouteRecordRaw[] = [
   { path: '/:pathMatch(.*)*', component: () => import('./guest/NotFound.vue') },
 ]
 
-const router = createRouter({ history: createWebHistory(), routes })
+const router = createRouter({ history: createWebHistory(secret.APP_BASE_URL), routes })
 
 router.beforeEach((to, from, next) => {
   console.log({ to, from })
