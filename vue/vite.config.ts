@@ -5,7 +5,7 @@ import vue from '@vitejs/plugin-vue'
 // https://vite.dev/config/
 export default defineConfig(({ command }) => ({
   plugins: [tailwindcss(), vue()],
-  base: command === 'serve' ? '/' : '/dashboar-admin-tailwind',
+  base: command === 'serve' ? '/' : '/dashboard-admin-tailwind',
 
   server: {
     port: 3000,
