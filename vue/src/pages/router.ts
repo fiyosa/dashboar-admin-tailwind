@@ -19,12 +19,13 @@ const routes: readonly RouteRecordRaw[] = [
 const router = createRouter({ history: createWebHistory(secret.APP_BASE_URL), routes })
 
 router.beforeEach((to, from, next) => {
-  console.log({ to, from })
-
-  if (to.meta?.auth) {
+  if (sessionStorage.redirect) {
+    const redirect = sessionStorage.redirect
+    delete sessionStorage.redirect
+    next(redirect)
+  } else {
+    next()
   }
-
-  next()
 })
 
 export default router

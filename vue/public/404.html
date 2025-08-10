@@ -4,14 +4,9 @@
   <meta charset="utf-8">
   <title>Redirecting...</title>
   <script>
-    const pathSegments = location.pathname.split('/');
-    // Adjust this base if your GitHub Pages project is not at the root of the repository
-    // For example, if your project is at https://username.github.io/my-repo/, then base should be '/my-repo/'
-    // Based on your vite.config.ts, your base is '/dashboard-admin-tailwind/'
-    const base = '/dashboard-admin-tailwind/'; 
-    const redirectPath = base + 'index.html#' + location.pathname.substring(base.length) + location.search;
-    window.location.replace(redirectPath);
+    sessionStorage.redirect = location.href;
   </script>
+  <meta http-equiv="refresh" content="0;URL='/dashboard-admin-tailwind/'"></meta>
 </head>
 <body>
   <p>If you are not redirected automatically, follow this <a href="/">link</a>.</p>
