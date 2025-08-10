@@ -1,1 +1,0 @@
-import{_ as o}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{c as s,o as t,a}from"../main.js";const r={},c={class:"home"};function n(_,e){return t(),s("div",c,e[0]||(e[0]=[a("h1",null,"This is the home page of the guest area",-1)]))}const m=o(r,[["render",n],["__scopeId","data-v-bf65af5d"]]);export{m as default};
