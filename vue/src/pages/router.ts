@@ -7,7 +7,6 @@ const routes: readonly RouteRecordRaw[] = [
     meta: { auth: true, title: 'Dashboard' },
     component: () => import('../components/molecule/dashboard/Dashboard.vue'),
     children: [
-      //
       { path: '', component: () => import('./guest/Home.vue'), meta: { title: 'Home' } },
       { path: '/about', component: () => import('./guest/About.vue'), meta: { title: 'About' } },
     ],
@@ -19,13 +18,12 @@ const routes: readonly RouteRecordRaw[] = [
 const router = createRouter({ history: createWebHistory(secret.APP_BASE_URL), routes })
 
 router.beforeEach((to, from, next) => {
-  if (sessionStorage.redirect) {
-    const redirect = sessionStorage.redirect
-    delete sessionStorage.redirect
-    next(redirect)
-  } else {
-    next()
+  console.log({ to, from })
+
+  if (to.meta?.auth) {
   }
+
+  next()
 })
 
 export default router
